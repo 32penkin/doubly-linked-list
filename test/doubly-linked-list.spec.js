@@ -35,6 +35,20 @@ describe('Node', () => {
     });
   });
 
+  describe('#get', () => {
+    const dll1 = new DoublyLinkedList();
+
+    dll1.append('node1');
+    dll1.append('node2');
+    dll1.append('node3');
+
+    it('should return Node.data by index', () => {
+      expect(dll1.get(0).to.equal('node1'));
+      expect(dll1.get(1).to.equal('node2'));
+      expect(dll1.get(2).to.equal('node3'));
+    });
+  });
+
 
 
 

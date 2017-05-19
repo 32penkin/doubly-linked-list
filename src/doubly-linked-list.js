@@ -21,14 +21,6 @@ class DoublyLinkedList {
     this.length++;
   }
 
-  head() {
-
-  }
-
-  tail() {
-
-  }
-
   get(position) {
 
   }
@@ -37,19 +29,27 @@ class DoublyLinkedList {
 
   }
 
-  isEmpty() {
-
-  }
-
-  clear() {
-
-  }
-
   remove(position) {
 
   }
 
   reverse() {
+
+  }
+
+  head() {
+
+  }
+
+  tail() {
+
+  }
+
+  isEmpty() {
+
+  }
+
+  clear() {
 
   }
 
