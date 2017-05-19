@@ -59,7 +59,23 @@ describe('Node', () => {
     dll1.append('node1');
     dll1.append('node2');
     dll1.add('node3', 1);
+
     it('should insert data by position', () => {
+      expect(dll1.get(1)).to.equal('node3');
+    });
+  });
+
+  describe('#remove', () => {
+    const dll1 = new DoublyLinkedList();
+
+    dll1.append('node1');
+    dll1.append('node2');
+    dll1.append('node3');
+    dll1.append('node4');
+
+    dll1.remove(1);
+
+    it('should delete node from spec. posotion', () => {
       expect(dll1.get(1)).to.equal('node3');
     });
   });
