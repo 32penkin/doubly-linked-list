@@ -115,6 +115,35 @@ describe('Node', () => {
     });
   });
 
+  describe('#isEmpty', () => {
+    const dll1 = new DoublyLinkedList();
+    const dll2 = new DoublyLinkedList();
+
+    dll1.append('node1');
+
+    it('check is empty', () => {
+      expect(dll1.isEmpty()).to.equal(false);
+    });
+
+    it('check is empty', () => {
+      expect(dll2.isEmpty()).to.equal(true);
+    });
+  });
+
+  describe('#clear', () => {
+    const dll1 = new DoublyLinkedList();
+
+    dll1.append('node1');
+    dll1.clear();
+
+    it('check cleared list', () => {
+      expect(dll1.head).to.equal(null);
+      expect(dll1.tail).to.equal(null);
+      expect(dll1.length).to.equal(0);
+    });
+  });
+
+
 
 
 });
