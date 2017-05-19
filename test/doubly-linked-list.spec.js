@@ -1,4 +1,5 @@
 const DoublyLinkedList = require('../src/doubly-linked-list');
+const Node = require('../src/node');
 
 describe('Node', () => {
   describe('#constructor', () => {
@@ -16,5 +17,25 @@ describe('Node', () => {
       expect(dll1.tail).to.equal(null);
     });
   });
+
+  describe('#append', () => {
+    const dll1 = new DoublyLinkedList();
+
+    dll1.append('node1');
+    dll1.append('node2');
+    dll1.append('node3');
+
+    it('should assign any nodes to this.head and this.tail', () => {
+      expect(dll1.head).to.be.an.instanceof(Node);
+      expect(dll1.tail).to.be.an.instanceof(Node);
+    });
+
+    it('assigns node2 to this.head.next', () => {
+      expect(dll1.head.next.data).to.equal('node2');
+    });
+  });
+
+
+
 
 });

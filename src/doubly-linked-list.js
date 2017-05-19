@@ -1,3 +1,5 @@
+const Node = require('./node');
+
 class DoublyLinkedList {
   constructor() {
     this.head = null;
