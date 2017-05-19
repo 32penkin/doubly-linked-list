@@ -88,6 +88,33 @@ describe('Node', () => {
     });
   });
 
+  describe('#reverse', () => {
+    const dll1 = new DoublyLinkedList();
+
+    dll1.append('node1');
+    dll1.append('node2');
+    dll1.append('node3');
+    dll1.append('node4');
+
+    dll1.reverse();
+
+    it('check head', () => {
+      expect(dll1.head.data).to.equal('node4');
+    });
+
+    it('check tail', () => {
+      expect(dll1.tail.data).to.equal('node1');
+    });
+
+    it('check element', () => {
+      expect(dll1.get(1)).to.equal('node3');
+    });
+
+    it('check element', () => {
+      expect(dll1.get(2)).to.equal('node2');
+    });
+  });
+
 
 
 });
