@@ -1,0 +1,29 @@
+{
+  "name": "doubly-linked-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -r ./test/setup-mocha.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/32penkin/doubly-linked-list.git"
+  },
+  "author": "Yauhen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/32penkin/doubly-linked-list/issues"
+  },
+  "homepage": "https://github.com/32penkin/doubly-linked-list#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.2",
+    "sinon": "1.17.5",
+    "sinon-chai": "2.8.0"
+  }
+}
