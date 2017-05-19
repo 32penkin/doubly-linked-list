@@ -10,7 +10,7 @@ class DoublyLinkedList {
   append(data) {
     const node = new Node(data);
 
-    if(!this.head && !this.tail) {
+    if (!this.head && !this.tail) {
       this.head = node;
       this.tail = node;
     } else {
@@ -25,7 +25,7 @@ class DoublyLinkedList {
     let currentNode = this.head;
     let i = 0;
 
-    while(i < position) {
+    while (i < position) {
       currentNode = currentNode.next;
       i++;
     }
@@ -37,7 +37,7 @@ class DoublyLinkedList {
     let currentNode = this.head;
     let i = 1;
 
-    while(i < position) {
+    while (i < position) {
       currentNode = currentNode.next;
       i++;
     }
@@ -57,8 +57,8 @@ class DoublyLinkedList {
       currentNode = currentNode.next;
       i++
     }
-    if(currentNode.prev) currentNode.prev.next = currentNode.next;
-    if(currentNode.next) currentNode.next.prev = currentNode.prev;
+    if (currentNode.prev) currentNode.prev.next = currentNode.next;
+    if (currentNode.next) currentNode.next.prev = currentNode.prev;
 
     this.length--;
   }
@@ -69,7 +69,7 @@ class DoublyLinkedList {
 
     while (currentNode) {
       temp.push(currentNode.data);
-      if(currentNode.next) currentNode = currentNode.next;
+      if (currentNode.next) currentNode = currentNode.next;
       else break;
     }
 
@@ -77,7 +77,7 @@ class DoublyLinkedList {
 
     while (currentNode) {
       currentNode.data = temp.pop();
-      if(currentNode.next) currentNode = currentNode.next;
+      if (currentNode.next) currentNode = currentNode.next;
       else break;
     }
   }
