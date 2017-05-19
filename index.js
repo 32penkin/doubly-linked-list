@@ -7,4 +7,6 @@ dll1.append('node1');
 dll1.append('node2');
 dll1.append('node3');
 
-console.log(dll1);
+console.log(dll1.get(0));
+console.log(dll1.get(1));
+console.log(dll1.get(2));

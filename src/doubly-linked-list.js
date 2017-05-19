@@ -22,7 +22,14 @@ class DoublyLinkedList {
   }
 
   get(position) {
+    let currentNode = this.head;
+    let i = 0;
 
+    while(i < position) {
+      currentNode = currentNode.next;
+      i++;
+    }
+    return currentNode.data;
   }
 
   add(data, position) {

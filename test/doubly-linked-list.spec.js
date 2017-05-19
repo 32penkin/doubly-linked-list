@@ -33,6 +33,10 @@ describe('Node', () => {
     it('assigns node2 to this.head.next', () => {
       expect(dll1.head.next.data).to.equal('node2');
     });
+
+    it('check the length of the list', () => {
+      expect(dll1.length).to.equal(3);
+    });
   });
 
   describe('#get', () => {
@@ -43,9 +47,9 @@ describe('Node', () => {
     dll1.append('node3');
 
     it('should return Node.data by index', () => {
-      expect(dll1.get(0).to.equal('node1'));
-      expect(dll1.get(1).to.equal('node2'));
-      expect(dll1.get(2).to.equal('node3'));
+      expect(dll1.get(0)).to.equal('node1');
+      expect(dll1.get(1)).to.equal('node2');
+      expect(dll1.get(2)).to.equal('node3');
     });
   });
 
