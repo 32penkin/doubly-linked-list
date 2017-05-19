@@ -6,7 +6,11 @@ const dll1 = new DoublyLinkedList();
 dll1.append('node1');
 dll1.append('node2');
 dll1.append('node3');
-dll1.remove(1);
+dll1.append('node4');
 
-console.log(dll1);
+dll1.reverse();
+
+console.log(dll1.get(0));
 console.log(dll1.get(1));
+console.log(dll1.get(2));
+console.log(dll1.get(3));
