@@ -33,7 +33,20 @@ class DoublyLinkedList {
   }
 
   add(data, position) {
+    const node = new Node(data);
+    let currentNode = this.head;
+    let i = 1;
 
+    while(i < position) {
+      currentNode = currentNode.next;
+      i++;
+    }
+
+    node.prev = currentNode;
+    node.next = currentNode.next;
+    currentNode.next = node;
+
+    this.length++;
   }
 
   remove(position) {
