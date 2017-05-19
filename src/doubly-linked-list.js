@@ -8,7 +8,17 @@ class DoublyLinkedList {
   }
 
   append(data) {
+    const node = new Node(data);
 
+    if(!this.head && !this.tail) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      this.tail.next = node;
+      node.prev = this.tail;
+      this.tail = node;
+    }
+    this.length++;
   }
 
   head() {
