@@ -50,7 +50,17 @@ class DoublyLinkedList {
   }
 
   remove(position) {
+    let currentNode = this.head;
+    let i = 0;
 
+    while (i < position) {
+      currentNode = currentNode.next;
+      i++
+    }
+    if(currentNode.prev) currentNode.prev.next = currentNode.next;
+    if(currentNode.next) currentNode.next.prev = currentNode.prev;
+
+    this.length--;
   }
 
   reverse() {

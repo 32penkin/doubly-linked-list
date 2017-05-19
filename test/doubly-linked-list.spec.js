@@ -63,6 +63,10 @@ describe('Node', () => {
     it('should insert data by position', () => {
       expect(dll1.get(1)).to.equal('node3');
     });
+
+    it('check the length of the list', () => {
+      expect(dll1.length).to.equal(3);
+    });
   });
 
   describe('#remove', () => {
@@ -77,6 +81,10 @@ describe('Node', () => {
 
     it('should delete node from spec. posotion', () => {
       expect(dll1.get(1)).to.equal('node3');
+    });
+
+    it('check the length of the list', () => {
+      expect(dll1.length).to.equal(3);
     });
   });
 
