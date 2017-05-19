@@ -8,9 +8,8 @@ dll1.append('node2');
 dll1.append('node3');
 dll1.append('node4');
 
-dll1.reverse();
-
-console.log(dll1.get(0));
-console.log(dll1.get(1));
-console.log(dll1.get(2));
-console.log(dll1.get(3));
+console.log(dll1.getHead());
+console.log(dll1.getTail());
+console.log(dll1.isEmpty());
+dll1.clear();
+console.log(dll1.isEmpty());

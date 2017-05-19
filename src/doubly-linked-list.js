@@ -82,20 +82,22 @@ class DoublyLinkedList {
     }
   }
 
-  head() {
-
+  getHead() {
+    return this.head;
   }
 
-  tail() {
-
+  getTail() {
+    return this.tail;
   }
 
   isEmpty() {
-
+    return this.length == 0;
   }
 
   clear() {
-
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
 }
