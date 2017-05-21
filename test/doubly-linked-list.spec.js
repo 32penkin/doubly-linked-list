@@ -51,6 +51,24 @@ describe('Node', () => {
       expect(dll1.get(1)).to.equal('node2');
       expect(dll1.get(2)).to.equal('node3');
     });
+
+    it('verify the correctness of position (1)', () => {
+      expect(() => {
+        ll.get(-2)
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (2)', () => {
+      expect(() => {
+        ll.get('position')
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (3)', () => {
+      expect(() => {
+        ll.get(10)
+      }).to.throw();
+    });
   });
 
   describe('#add', () => {
@@ -66,6 +84,24 @@ describe('Node', () => {
 
     it('check the length of the list', () => {
       expect(dll1.length).to.equal(3);
+    });
+
+    it('verify the correctness of position (1)', () => {
+      expect(() => {
+        ll.get(-2)
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (2)', () => {
+      expect(() => {
+        ll.get('position')
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (3)', () => {
+      expect(() => {
+        ll.get(10)
+      }).to.throw();
     });
   });
 
@@ -85,6 +121,24 @@ describe('Node', () => {
 
     it('check the length of the list', () => {
       expect(dll1.length).to.equal(3);
+    });
+
+    it('verify the correctness of position (1)', () => {
+      expect(() => {
+        ll.get(-2)
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (2)', () => {
+      expect(() => {
+        ll.get('position')
+      }).to.throw();
+    });
+
+    it('verify the correctness of position (3)', () => {
+      expect(() => {
+        ll.get(10)
+      }).to.throw();
     });
   });
 
@@ -116,17 +170,23 @@ describe('Node', () => {
   });
 
   describe('#isEmpty', () => {
-    const dll1 = new DoublyLinkedList();
-    const dll2 = new DoublyLinkedList();
+    const ll = new DoublyLinkedList();
+    const ll2 = new DoublyLinkedList();
 
-    dll1.append('node1');
+    ll.append('node1');
+    ll.append('node2');
 
-    it('check is empty', () => {
-      expect(dll1.isEmpty()).to.equal(false);
+    it('check is empty the list', () => {
+      expect(ll.isEmpty()).to.equal(false);
     });
 
-    it('check is empty', () => {
-      expect(dll2.isEmpty()).to.equal(true);
+    it('check is empty the list', () => {
+      expect(ll2.isEmpty()).to.equal(true);
+    });
+
+    it('check is empty the list', () => {
+      ll.clear();
+      expect(ll.isEmpty()).to.equal(true);
     });
   });
 
