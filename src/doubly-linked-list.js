@@ -22,6 +22,10 @@ class DoublyLinkedList {
   }
 
   get(position) {
+    if (position >= this.length || position < 0 || typeof position !== 'number') {
+      throw 'The position is outside the list!'
+    }
+
     let currentNode = this.head;
     let i = 0;
 
@@ -33,6 +37,10 @@ class DoublyLinkedList {
   }
 
   add(data, position) {
+    if (position >= this.length || position < 0 || typeof position !== 'number') {
+      throw 'The position is outside the list!'
+    }
+
     const node = new Node(data);
     let currentNode = this.head;
     let i = 1;
@@ -50,6 +58,10 @@ class DoublyLinkedList {
   }
 
   remove(position) {
+    if (position >= this.length || position < 0 || typeof position !== 'number') {
+      throw 'The position is outside the list!'
+    }
+
     let currentNode = this.head;
     let i = 0;
 
