@@ -8,7 +8,9 @@ class DoublyLinkedList {
   }
 
   append(data) {
+    if (data == undefined) throw 'Data is undefined!';
     const node = new Node(data);
+
 
     if (!this.head && !this.tail) {
       this.head = node;
