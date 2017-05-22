@@ -1,7 +1,7 @@
 const DoublyLinkedList = require('../src/doubly-linked-list');
 const Node = require('../src/node');
 
-describe('Node', () => {
+describe('DoublyLinkedList', () => {
   describe('#constructor', () => {
     const dll1 = new DoublyLinkedList();
 
@@ -20,10 +20,17 @@ describe('Node', () => {
 
   describe('#append', () => {
     const dll1 = new DoublyLinkedList();
+    const dll2 = new DoublyLinkedList();
 
     dll1.append('node1');
     dll1.append('node2');
     dll1.append('node3');
+
+    it('if I will try to add undefined data', () => {
+      expect(() => {
+        dll2.append();
+      }).to.throw();
+    });
 
     it('should assign any nodes to this.head and this.tail', () => {
       expect(dll1.head).to.be.an.instanceof(Node);
@@ -88,25 +95,26 @@ describe('Node', () => {
 
     it('verify the correctness of position (1)', () => {
       expect(() => {
-        ll.get(-2)
+        dll1.get(-2)
       }).to.throw();
     });
 
     it('verify the correctness of position (2)', () => {
       expect(() => {
-        ll.get('position')
+        dll1.get('position')
       }).to.throw();
     });
 
     it('verify the correctness of position (3)', () => {
       expect(() => {
-        ll.get(10)
+        dll1.get(10)
       }).to.throw();
     });
   });
 
   describe('#remove', () => {
     const dll1 = new DoublyLinkedList();
+    const dll2 = new DoublyLinkedList();
 
     dll1.append('node1');
     dll1.append('node2');
@@ -114,6 +122,12 @@ describe('Node', () => {
     dll1.append('node4');
 
     dll1.remove(1);
+
+    it('try to use remove method to empty list', () => {
+      expect(() => {
+        dll2.remove(0);
+      }).to.throw();
+    });
 
     it('should delete node from spec. posotion', () => {
       expect(dll1.get(1)).to.equal('node3');
@@ -125,19 +139,19 @@ describe('Node', () => {
 
     it('verify the correctness of position (1)', () => {
       expect(() => {
-        ll.get(-2)
+        dll1.get(-2)
       }).to.throw();
     });
 
     it('verify the correctness of position (2)', () => {
       expect(() => {
-        ll.get('position')
+        dll1.get('position')
       }).to.throw();
     });
 
     it('verify the correctness of position (3)', () => {
       expect(() => {
-        ll.get(10)
+        dll1.get(10)
       }).to.throw();
     });
   });
@@ -192,11 +206,19 @@ describe('Node', () => {
 
   describe('#clear', () => {
     const dll1 = new DoublyLinkedList();
+    const dll2 = new DoublyLinkedList();
 
     dll1.append('node1');
     dll1.clear();
 
     it('check cleared list', () => {
+      expect(dll1.head).to.equal(null);
+      expect(dll1.tail).to.equal(null);
+      expect(dll1.length).to.equal(0);
+    });
+
+    it('clear the clean list', () => {
+      dll2.clear();
       expect(dll1.head).to.equal(null);
       expect(dll1.tail).to.equal(null);
       expect(dll1.length).to.equal(0);
